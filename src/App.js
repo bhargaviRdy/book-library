@@ -3,36 +3,55 @@ import React, { useState } from "react";
 
 const books = {
   currently_reading: [
-    { name: "The subtle art of Not Giving a F*ck", rating: "5/5" },
-    { name: "Tuesdays with Morries", rating: "4/5" },
-    { name: "Gone Girl", rating: "3.5/5" }
+    {
+      name: "The subtle art of Not Giving a F*ck",
+      description: "Tells about how to handle situations",
+      rating: "5/5"
+    },
+    {
+      name: "Tuesdays with Morries",
+      description: "Life lessons given by an old man",
+      rating: "4/5"
+    },
+    {
+      name: "Gone Girl",
+      description: "A thriller story about a couple",
+      rating: "3.5/5"
+    }
   ],
 
   fiction: [
     {
       name: "The Kite Runner",
+      description: "Store of two boys based on Afghanisthan",
       rating: "5/5"
     },
     {
       name: "One Indian Women",
+      description: "Story of a women going through her career and marriage",
       rating: "4.5/5"
     },
     {
       name: "Revolution 2020",
+      description: "Story about teenagers and politics",
       rating: "4.5/5"
     }
   ],
   self_help: [
     {
       name: "The Atomic Habits",
+      description: " Tells us the impact of good habits and how to achive them",
       rating: "5/5"
     },
     {
       name: "The Miracle Morning",
+      description:
+        "Tells us about the usefullness of waking up early in the morning",
       rating: "5/5"
     },
     {
       name: "Meditations",
+      description: "Life lessions by Marcus Aurelius",
       rating: "5/5"
     }
   ]
@@ -88,6 +107,7 @@ export default function App() {
             }}
           >
             <p style={{ fontSize: "large" }}>{book.name}</p>
+            <p>{book.description}</p>
             <p style={{ fontSize: "small" }}>Rating: {book.rating}</p>
           </div>
         );
